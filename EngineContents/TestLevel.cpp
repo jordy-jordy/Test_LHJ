@@ -1,21 +1,15 @@
 #include "PreCompile.h"
 #include "TestLevel.h"
-#include "Test_Rederer_LHJ.h"
 
 #include <EngineCore/CameraActor.h>
-#include <EngineCore/DefaultSceneComponent.h>
 #include <EnginePlatform/EngineInput.h>
 
+#include "Test_Actor.h"
 
 ATestLevel::ATestLevel()
 {
-	std::shared_ptr<UDefaultSceneComponent> Default = CreateDefaultSubObject<UDefaultSceneComponent>();
-	RootComponent = Default;
-
-	const float DIASIZE = 200.f;
-	Renderer = CreateDefaultSubObject<Test_Rederer_LHJ>();
-	Renderer->SetScale3D({ DIASIZE, DIASIZE, DIASIZE });
-	Renderer->SetupAttachment(RootComponent);
+	// 시험용 액터 소환
+	std::shared_ptr<ATest_Actor> Actor = GetWorld()->SpawnActor<ATest_Actor>();
 
 	std::shared_ptr<ACameraActor> Camera = GetWorld()->GetMainCamera();
 	Camera->SetActorLocation({ 0.0f, 0.0f, -500.0f });
@@ -36,10 +30,6 @@ void ATestLevel::Tick(float _DeltaTime)
 		Camera->FreeCameraSwitch();
 	}
 
-	float XROTSPEED = 0.0f;
-	float YROTSPEED = 0.0f;
-	float ZROTSPEED = 100.0f;
-	Renderer->AddWorldRotation({ XROTSPEED * _DeltaTime, YROTSPEED * _DeltaTime, ZROTSPEED * _DeltaTime });
 }
 
 ATestLevel::~ATestLevel()

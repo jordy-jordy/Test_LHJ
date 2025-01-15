@@ -180,6 +180,10 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="PreCompile.h" />
+    <ClInclude Include="Test_Actor.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Test_Rederer_LHJ.h">
       <SubType>
       </SubType>
@@ -203,6 +207,10 @@
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PreCompile.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PreCompile.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Test_Actor.cpp">
+      <SubType>
+      </SubType>
     </ClCompile>
     <ClCompile Include="Test_Rederer_LHJ.cpp">
       <SubType>

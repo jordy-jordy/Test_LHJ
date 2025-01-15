@@ -21,5 +21,4 @@ protected:
 
 
 private:
-	std::shared_ptr<class Test_Rederer_LHJ> Renderer = nullptr;
 };

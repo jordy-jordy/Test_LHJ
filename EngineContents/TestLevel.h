@@ -1,6 +1,7 @@
 #pragma once
 #include <EngineCore/GameMode.h>
 
+
 // Ό³Έν :
 class ATestLevel : public AGameMode
 {
@@ -14,6 +15,7 @@ public:
 	ATestLevel(ATestLevel&& _Other) noexcept = delete;
 	ATestLevel& operator=(const ATestLevel& _Other) = delete;
 	ATestLevel& operator=(ATestLevel&& _Other) noexcept = delete;
+
 
 protected:
 	void BeginPlay() override;

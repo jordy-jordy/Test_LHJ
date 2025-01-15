@@ -30,10 +30,8 @@ void ATestLevel::Tick(float _DeltaTime)
 	{
 		Camera->FreeCameraSwitch();
 	}
-
 }
 
 ATestLevel::~ATestLevel()
 {
-
 };

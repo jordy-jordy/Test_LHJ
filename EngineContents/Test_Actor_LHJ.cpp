@@ -23,7 +23,6 @@ ATest_Actor::~ATest_Actor()
 
 };
 
-
 void ATest_Actor::Tick(float _DeltaTime)
 {
 	float XROTSPEED = 0.0f;

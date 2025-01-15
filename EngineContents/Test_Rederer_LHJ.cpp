@@ -1,6 +1,7 @@
 #include "PreCompile.h"
 #include "Test_Rederer_LHJ.h"
 
+
 Test_Rederer_LHJ::Test_Rederer_LHJ()
 {
 	CreateRenderUnit();

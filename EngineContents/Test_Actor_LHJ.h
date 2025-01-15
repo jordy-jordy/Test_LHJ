@@ -16,8 +16,10 @@ public:
 	ATest_Actor& operator=(const ATest_Actor& _Other) = delete;
 	ATest_Actor& operator=(ATest_Actor&& _Other) noexcept = delete;
 
+
 protected:
 	void Tick(float _DeltaTime) override;
+
 
 private:
 	std::shared_ptr<class Test_Rederer_LHJ> Renderer = nullptr;

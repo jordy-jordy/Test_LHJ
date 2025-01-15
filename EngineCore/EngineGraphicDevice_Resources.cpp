@@ -132,8 +132,6 @@ void UEngineGraphicDevice::ShaderInit()
 
 void UEngineGraphicDevice::MeshInit()
 {
-	int a = 0;
-
 	{
 		std::vector<FEngineVertex> Vertexs;
 		Vertexs.resize(4);
@@ -173,6 +171,53 @@ void UEngineGraphicDevice::MeshInit()
 		UMesh::Create("Rect");
 		// FullRect 포스트프로세싱용 화면 전체크기 만한 매쉬를 제작.
 		UMesh::Create("FullRect", "FullRect", "Rect");
+	}
+
+	{
+		std::vector<FEngineVertex> Vertices = 
+		{
+			FEngineVertex{ FVector(-0.5f, 0.0f, 0.f), { 0.0f , 1.0f }, {1.0f, 0.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, 0.75f, 0.f), { 0.0f , 1.0f }, {1.0f, 0.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, 0.0f, -0.5f), { 0.0f , 1.0f }, {1.0f, 0.0f, 0.0f, 1.f} },
+
+			FEngineVertex{ FVector(0.0f, 0.75f, 0.f), { 0.0f , 1.0f }, {1.0f, 0.0f, 1.0f, 1.f} },
+			FEngineVertex{ FVector(0.5f, 0.0f, 0.f), { 0.0f , 1.0f }, {1.0f, 0.0f, 1.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, 0.0f, -0.5f), { 0.0f , 1.0f }, {1.0f, 0.0f, 1.0f, 1.f} },
+
+			FEngineVertex{ FVector(0.0f, 0.0f, -0.5f), { 0.0f , 1.0f }, {1.0f, 1.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(-0.5f, 0.0f, 0.f), { 0.0f , 1.0f }, {1.0f, 1.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, -0.75f, 0.f), { 0.0f , 1.0f }, {1.0f, 1.0f, 0.0f, 1.f} },
+
+			FEngineVertex{ FVector(0.0f, 0.0f, -0.5f), { 0.0f , 1.0f }, {0.0f, 1.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.5f, 0.0f, 0.f), { 0.0f , 1.0f }, {0.0f, 1.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, -0.75f, 0.f), { 0.0f , 1.0f }, {0.0f, 1.0f, 0.0f, 1.f} },
+
+			FEngineVertex{ FVector(-0.5f, 0.0f, 0.f), { 0.0f , 1.0f }, {1.0f, 0.0f, 1.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, 0.75f, 0.f), { 0.0f , 1.0f }, {1.0f, 0.0f, 1.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, 0.0f, 0.5f), { 0.0f , 1.0f }, {1.0f, 0.0f, 1.0f, 1.f} },
+
+			FEngineVertex{ FVector(0.0f, 0.75f, 0.f), { 0.0f , 1.0f }, {1.0f, 0.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.5f, 0.0f, 0.f), { 0.0f , 1.0f }, {1.0f, 0.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, 0.0f, 0.5f), { 0.0f , 1.0f }, {1.0f, 0.0f, 0.0f, 1.f} },
+
+			FEngineVertex{ FVector(0.0f, 0.0f, 0.5f), { 0.0f , 1.0f }, {0.0f, 1.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(-0.5f, 0.0f, 0.f), { 0.0f , 1.0f }, {0.0f, 1.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, -0.75f, 0.f), { 0.0f , 1.0f }, {0.0f, 1.0f, 0.0f, 1.f} },
+
+			FEngineVertex{ FVector(0.0f, 0.0f, 0.5f), { 0.0f , 1.0f }, {1.0f, 1.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.5f, 0.0f, 0.f), { 0.0f , 1.0f }, {1.0f, 1.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, -0.75f, 0.f), { 0.0f , 1.0f }, {1.0f, 1.0f, 0.0f, 1.f} },
+		};
+
+		std::vector<UINT> Indices;
+		for (int i = 0; i < Vertices.size(); ++i)
+		{
+			Indices.push_back(i);
+		}
+
+		UEngineVertexBuffer::Create("Diamond", Vertices);
+		UEngineIndexBuffer::Create("Diamond", Indices);
+		UMesh::Create("Diamond");
 	}
 
 }

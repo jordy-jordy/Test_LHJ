@@ -171,69 +171,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AMon.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
     <ClInclude Include="ContentsCore.h">
       <SubType>
       </SubType>
     </ClInclude>
-    <ClInclude Include="ContentsEditorGUI.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
-    <ClInclude Include="GMConst.h" />
-    <ClInclude Include="Monster.h" />
-    <ClInclude Include="Monster2.h" />
-    <ClInclude Include="MyCustomRenderer.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
-    <ClInclude Include="TitleHUD.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
-    <ClInclude Include="Player.h">
+    <ClInclude Include="TestLevel.h">
       <SubType>
       </SubType>
     </ClInclude>
     <ClInclude Include="PreCompile.h" />
-    <ClInclude Include="TileMapGameMode.h" />
-    <ClInclude Include="TitleGameMode.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
-    <ClInclude Include="TitleLogo.h">
+    <ClInclude Include="Test_Rederer_LHJ.h">
       <SubType>
       </SubType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AMon.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
     <ClCompile Include="ContentsCore.cpp">
       <SubType>
       </SubType>
     </ClCompile>
-    <ClCompile Include="ContentsCore_Resources.cpp" />
-    <ClCompile Include="ContentsEditorGUI.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
-    <ClCompile Include="Monster.cpp" />
-    <ClCompile Include="Monster2.cpp" />
-    <ClCompile Include="MyCustomRenderer.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
-    <ClCompile Include="TitleHUD.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
+    <ClCompile Include="TestLevel.cpp">
       <SubType>
       </SubType>
     </ClCompile>
@@ -247,12 +204,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PreCompile.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="TileMapGameMode.cpp" />
-    <ClCompile Include="TitleGameMode.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
-    <ClCompile Include="TitleLogo.cpp">
+    <ClCompile Include="Test_Rederer_LHJ.cpp">
       <SubType>
       </SubType>
     </ClCompile>

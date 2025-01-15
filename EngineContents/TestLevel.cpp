@@ -18,7 +18,7 @@ ATestLevel::ATestLevel()
 	Renderer->SetupAttachment(RootComponent);
 
 	std::shared_ptr<ACameraActor> Camera = GetWorld()->GetMainCamera();
-	Camera->SetActorLocation({ 0.0f, 0.0f, -1000.0f });
+	Camera->SetActorLocation({ 0.0f, 0.0f, -500.0f });
 };
 
 void ATestLevel::BeginPlay()
@@ -36,8 +36,10 @@ void ATestLevel::Tick(float _DeltaTime)
 		Camera->FreeCameraSwitch();
 	}
 
-	float ROTSPEED = 2.0f;
-	Renderer->AddWorldRotation({ 0.0f, ROTSPEED, 0.0f * _DeltaTime });
+	float XROTSPEED = 0.0f;
+	float YROTSPEED = 0.0f;
+	float ZROTSPEED = 100.0f;
+	Renderer->AddWorldRotation({ XROTSPEED * _DeltaTime, YROTSPEED * _DeltaTime, ZROTSPEED * _DeltaTime });
 }
 
 ATestLevel::~ATestLevel()

@@ -1,5 +1,5 @@
 #include "PreCompile.h"
-#include "Test_Actor.h"
+#include "Test_Actor_LHJ.h"
 
 #include <EngineCore/DefaultSceneComponent.h>
 

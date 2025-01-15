@@ -4,7 +4,8 @@
 #include <EngineCore/CameraActor.h>
 #include <EnginePlatform/EngineInput.h>
 
-#include "Test_Actor.h"
+#include "Test_Actor_LHJ.h"
+
 
 ATestLevel::ATestLevel()
 {

@@ -1,26 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClInclude Include="ContentsCore.h" />
     <ClInclude Include="TestLevel.h" />
     <ClInclude Include="Test_Rederer_LHJ.h" />
     <ClInclude Include="PreCompile.h">
       <Filter>PreCompile</Filter>
     </ClInclude>
-    <ClInclude Include="Test_Actor.h" />
+    <ClInclude Include="Test_Actor_LHJ.h" />
+    <ClInclude Include="ContentsCore.h">
+      <Filter>Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ContentsCore.cpp" />
     <ClCompile Include="TestLevel.cpp" />
     <ClCompile Include="Test_Rederer_LHJ.cpp" />
     <ClCompile Include="PreCompile.cpp">
       <Filter>PreCompile</Filter>
     </ClCompile>
-    <ClCompile Include="Test_Actor.cpp" />
+    <ClCompile Include="Test_Actor_LHJ.cpp" />
+    <ClCompile Include="ContentsCore.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="PreCompile">
       <UniqueIdentifier>{a313816e-ab76-42f1-be6e-4270a4fc8c2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{8f04d809-939e-4d8d-a31f-018b4982bcbd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

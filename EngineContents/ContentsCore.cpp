@@ -50,9 +50,6 @@ void UContentsCore::EngineStart(UEngineInitData& _Data)
 
 	UEngineCore::CreateLevel<ATestLevel, APawn, AHUD>("TestLevel");
 	UEngineCore::OpenLevel("TestLevel");
-
-
-
 }
 
 void UContentsCore::EngineTick(float _DeltaTime)
